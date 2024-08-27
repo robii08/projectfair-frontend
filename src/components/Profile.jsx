@@ -37,7 +37,7 @@ function Profile() {
       reqBody.append("email",email)
       reqBody.append("password",password)
       reqBody.append("github",github)
-      reqBody.append("linkdin",username)
+      reqBody.append("linkdin",linkdin)
       preview?reqBody.append("profile",profile):reqBody.append("profile",existingImage)
 
       const token = sessionStorage.getItem("token")
@@ -94,7 +94,7 @@ function Profile() {
       setUserDetails({...userDetails,username:user.username,email:user.email,password:user.password,github:user.github,linkdin:user.linkdin})
       setExistingImage(user.profile)
     }
-  },[])
+  },[updateStatus])
 
   console.log(userDetails);
   
