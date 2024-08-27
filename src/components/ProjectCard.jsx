@@ -39,7 +39,7 @@ function ProjectCard({project}) {
               <h4>Description</h4>
               <p>{project?.overview}</p>
               <h4 className='mt-3'>Technologies</h4>
-              <p>React</p>
+              <p>{project?.language}</p>
             </Col>
           </Row>
         </Modal.Body>
